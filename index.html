@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+   <HEAD>
+      <TITLE>Promises</TITLE>
+   </HEAD>
+   <BODY>
+      <P>Promises!!</P>
+      <div>
+         <input type="radio" id="succeed" name="operationResult" value="SUCCEED" checked>
+         <label for="succeed">Succeed</label><br>
+         <input type="radio" id="fail" name="operationResult" value="FAIL">
+         <label for="fail">Fail</label><br>
+      </div>
+      <div class="button-container">
+         <div class="space">
+            <button id="doCallbackGreatness">
+                Execute Callback Greatness
+            </button>
+          </div>
+          <div class="space">
+             <button id="doPromiseAwesomeness">
+                 Execute Promise Awesomeness
+             </button>
+           </div>
+           <div class="space">
+             <button id="doParallelWork">
+                 Execute Parallel Work
+             </button>
+           </div>
+      </div>
+   </BODY>
+   <script src="./promises.js"></script>
+   <style>
+
+      body {
+         padding: 20px;
+      }
+
+      button {
+         width: 200px;
+         height: 100px;
+         border-radius: 5px;
+      }
+
+      .space {
+         margin-top: 20px;
+         margin-right: 20px;
+      }
+
+      .button-container {
+         display: flex;
+         flex-direction: row;
+      }
+   </style>
+</HTML>
