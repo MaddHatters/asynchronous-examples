@@ -1,55 +1,123 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <HTML>
-   <HEAD>
-      <TITLE>Promises</TITLE>
-   </HEAD>
-   <BODY>
-      <P>Promises!!</P>
-      <div>
-         <input type="radio" id="succeed" name="operationResult" value="SUCCEED" checked>
-         <label for="succeed">Succeed</label><br>
-         <input type="radio" id="fail" name="operationResult" value="FAIL">
-         <label for="fail">Fail</label><br>
-      </div>
-      <div class="button-container">
-         <div class="space">
-            <button id="doCallbackGreatness">
-                Execute Callback Greatness
-            </button>
-          </div>
-          <div class="space">
-             <button id="doPromiseAwesomeness">
-                 Execute Promise Awesomeness
-             </button>
-           </div>
-           <div class="space">
-             <button id="doParallelWork">
-                 Execute Parallel Work
-             </button>
-           </div>
-      </div>
-   </BODY>
-   <script src="./promises.js"></script>
-   <style>
 
-      body {
-         padding: 20px;
-      }
+<HEAD>
+	<title>Async Examples</title>
+</HEAD>
 
-      button {
-         width: 200px;
-         height: 100px;
-         border-radius: 5px;
-      }
+<body>
+	<div class="container left-container">
+		<div>
+			<input type="radio" id="succeed" name="operationResult" value="SUCCEED" checked>
+			<label for="succeed">Succeed</label><br>
+			<input type="radio" id="fail" name="operationResult" value="FAIL">
+			<label for="fail">Fail</label><br>
+		</div>
+		<div class="button-container">
+			<div class="space">
+				<button class="button--large" id="executeCallbackExample">
+					Call Function With Callback
+				</button>
+			</div>
+			<div class="space">
+				<button class="button--large" id="callbackHell">
+					Callback Hell
+				</button>
+			</div>
+			<div class="space">
+				<button class="button--large" id="executeParallelWorkWithCallbacks">
+					Execute Parallel Work With Callbacks
+				</button>
+			</div>
+			<div class="space">
+				<button class="button--large" id="executeCallbackLikePromises">
+					Callbacks Like Promises
+				</button>
+			</div>
+		</div>
+		<div class="button-container">
+			<div class="space">
+				<button class="button--large" id="doPromiseAwesomeness">
+					Execute Promise Awesomeness
+				</button>
+			</div>
+			<div class="space">
+				<button class="button--large" id="doParallelWork">
+					Execute Parallel Work
+				</button>
+			</div>
+		</div>
+		<div class="button-container">
+			<div class="space">
+				<button class="button--large" id="executeObservableMagic">
+					Execute Observable Magic
+				</button>
+			</div>
+		</div>
+		<div>
+			<div class="space">
+				<button class="button--small" id="startButton">
+					Start
+				</button>
+				<button class="button--small" id="pauseButton">
+					Pause
+				</button>
+				<button class="button--small" id="resetButton">
+					Reset
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div>
+			<h2>Grocery Item</h2>
+			<p id="groceryCart"></p>
+		</div>
+	</div>
+</body>
+<script src="https://unpkg.com/rxjs@^7/dist/bundles/rxjs.umd.min.js"></script>
+<script type="module" src="./promises.mjs"></script>
+<script type="module" src="./callbacks.mjs"></script>
+<script type="module" src="./rxjs.mjs"></script>
+<style>
+	body {
+		height: 100%;
+		margin: 20px;
+		display: flex;
+	}
 
-      .space {
-         margin-top: 20px;
-         margin-right: 20px;
-      }
+	.button--large {
+		width: 200px;
+		height: 100px;
+		border-radius: 5px;
+	}
 
-      .button-container {
-         display: flex;
-         flex-direction: row;
-      }
-   </style>
+	.button--small {
+		width: 75px;
+		height: 50px;
+		border-radius: 5px;
+	}
+
+	.space {
+		margin-top: 20px;
+		margin-right: 20px;
+	}
+
+	.button-container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.container {
+		margin: 20px;
+	}
+
+	.left-container {
+		height: 100%;
+		width: 75%;
+		border-right: 1px solid black;
+	}
+</style>
+
 </HTML>
